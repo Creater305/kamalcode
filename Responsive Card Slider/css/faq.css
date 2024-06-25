@@ -1,0 +1,266 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+.sora-fontfaq1 {
+   font-family: "Sora"; 
+  font-optical-sizing: auto;
+  font-weight:700;
+  font-style: normal;
+}
+
+.faqpage{
+    min-width: 100 vh;
+   min-height: 100vh ;
+   background-color: white;
+   
+  position: relative;
+  
+ 
+}
+
+.faqheader{
+    background-color: #ffffff;
+   opacity: 0.9; 
+    z-index: 2;
+    min-height: 60vh;
+    width: 80%;
+    margin:0 auto; 
+    display: flex;
+    flex-direction: column; 
+  align-items: center;
+  overflow: hidden;
+position: relative;
+  margin-top: 2%;
+  z-index: 2;
+  margin-left: 6%;
+   
+}
+
+
+
+ .hedfaq{
+  
+     font-size: 3rem;
+     color: #000000;
+     font-style: normal;
+     font-weight: 700;
+     line-height: normal;
+     margin: auto;
+     margin-top: 10px;
+         
+ }
+ .hedfaq2{
+
+    color: #FF2A2A;
+text-align: justify;
+font-family: "Sora"; 
+font-size: 31px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 4px;
+ }
+ 
+ .faq{
+     background-color: rgb(255, 255, 255);
+  max-width:95% ;
+  
+  
+   border-bottom: 2px solid #000000;
+  cursor: pointer;
+ 
+  
+  justify-self: center;
+ 
+ }
+ .question{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 0px;
+  
+     
+ }
+ .question h3{
+     font-size: 1.8rem;
+     
+    
+ }
+ .answer p{
+ 
+   padding-bottom:20px;
+   line-height: 1.6;
+   font-size: 1.4rem;
+ 
+ }
+ 
+ .answer{
+    background-color: #ffffff;
+     max-height:0;
+     overflow: hidden;
+     transition: max-height 1.4s ease;
+     
+     
+ }
+ .faq.active .answer{
+     animation: fade 1s ease-in-out;
+ max-height: 300px;
+ }
+ 
+ .faq.active .arrow{
+     transform: rotateZ(180deg);
+     transition: transform 0.2s ease-in-out ;
+    
+ 
+ }
+ .faq.active .arrow ::after{
+     transform: rotateZ(-180deg);
+     transition: transform 0.2s ease-in-out ;
+    
+ 
+ }
+ .faq.active{
+ /*     margin-bottom:15px; */
+ }
+ 
+ 
+ .arrow{
+  transition: transfrom .5s ease-in-out;
+  margin-right: 15px;
+ }
+  .circle{
+         height:100px ;
+         width:90px ;
+     
+ } 
+ .namehead{
+
+    padding-top: 60px;
+     margin-left:8% ; 
+     background-color: rgb(255, 255, 255);
+     justify-content: center;
+     align-items: center;
+    
+     /*  background-image: url('./bg1.jpg');  */
+    
+
+/*      mask-image: linear-gradient(to top,rgba(0, 0, 0, 0.0), rgb(0, 0, 0,1)); */ /* Mask gradient from bottom to top */
+    
+ }
+ 
+  @keyframes fade{
+     from{
+         opacity: 0;
+         transform: translate(-10px);
+ 
+     }
+     to {
+         opacity:1;
+         transfrom: translate (0px);
+        }
+ } 
+ 
+ 
+ /* .leffect{
+     height:230px;
+     width: 270px;
+     background-color: rgb(70, 243, 237);
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-top-left-radius: 50%;
+     border-top-right-radius: 50%;
+     animation-name:goo;
+     animation-duration: 6s;
+     animation-iteration-count:infinite;
+     animation-direction: alternate;
+     animation-timing-function: ease-in-out;
+   
+   
+ 
+     
+ } */
+ .einside{
+  
+     color: rgb(255, 68, 0);
+     align-items: center;
+  
+     padding-left: 70px;
+ padding-top: 100px;
+     font-size: 40px;
+     font-weight:bolder;
+     
+ }
+/*   @keyframes goo{
+ 
+     from{
+         filter:blur(20px);
+         transform: translate(10%, -10%) skew(0);
+ 
+     }
+     to{
+        filter: blur(30px);
+        transform: translate(-10%,10%) skew(-12deg);
+     }
+ }
+  */
+ .reffect{
+   
+     
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     
+     animation-name:goor;
+     animation-duration: 6s;
+     animation-iteration-count:infinite;
+     animation-direction: alternate;
+     animation-timing-function: ease-in-out;
+   
+   z-index: 1;
+ 
+     
+ }  
+/*   @keyframes goor{
+ 
+     from{
+         filter:blur(20px);
+         transform: translate(-10%,-10%) skew(0);
+ 
+     }
+     to{
+        filter: blur(30px);
+        transform: translate(10%,10%) skew(12deg);
+     }
+ }
+  */
+
+ 
+ @media screen and (max-width:576px){
+
+.hedfaq{
+ font-size: 35px;
+}
+.hedfaq2{
+    font-size: 24px;
+  margin-right: 3%;
+ text-align: left;    
+  
+}
+.faqpage{
+
+}
+
+
+
+.question h3{
+font-size: 1.5rem;
+}
+
+
+.answer p{
+
+font-size:1.3rem;
+}
+
+ }
